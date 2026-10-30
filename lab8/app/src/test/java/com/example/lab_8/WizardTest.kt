@@ -49,6 +49,8 @@ class WizardTest {
 
     @Test
     fun train_manaIsGreaterThanOrEqualToNeeded() {
+        evilWizard.mana = 50
+        evilWizard.spellPower = 1
         val prevMana: Int = evilWizard.mana
         val prevSpellPower = evilWizard.spellPower
         evilWizard.train()
@@ -58,6 +60,8 @@ class WizardTest {
 
     @Test
     fun train_manaIsLessThanNeeded() {
+        evilWizard.mana = 4
+        evilWizard.spellPower = 3
         val prevMana: Int = evilWizard.mana
         val prevSpellPower = evilWizard.spellPower
         evilWizard.train()
