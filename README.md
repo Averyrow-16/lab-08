@@ -5,7 +5,7 @@
 - **CCID:** `arowley`
 
 ## References and Resources
-N/A
+`N/A`
 
 ## Verbal Collaboration
-N/A
+`N/A`
