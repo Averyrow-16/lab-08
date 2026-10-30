@@ -46,4 +46,22 @@ class WizardTest {
 
         assertEquals(70, evilWizard.mana)
     }
+
+    @Test
+    fun train_manaIsGreaterThanOrEqualToNeeded() {
+        val prevMana: Int = evilWizard.mana
+        val prevSpellPower = evilWizard.spellPower
+        evilWizard.train()
+        assertEquals(prevMana - 5, evilWizard.mana)
+        assertEquals(prevSpellPower + 1, evilWizard.spellPower)
+    }
+
+    @Test
+    fun train_manaIsLessThanNeeded() {
+        val prevMana: Int = evilWizard.mana
+        val prevSpellPower = evilWizard.spellPower
+        evilWizard.train()
+        assertEquals(prevMana, evilWizard.mana)
+        assertEquals(prevSpellPower, evilWizard.spellPower)
+    }
 }
